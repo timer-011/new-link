@@ -1,0 +1,39 @@
+{
+    "name": "new-link",
+    "manifest_version": 3,
+    "version": "1.0",
+    "description": "opens a new-tab with a specific link",
+    "author": "Priyanshu Vats",
+
+    "icons": {
+        "16": "images/icon_16.png",
+        "32": "images/icon_32.png",
+        "48": "images/icon_48.png",
+        "128": "images/icon_128.png"
+    },
+    "permissions": ["activeTab", "scripting", "tabs", "storage"],
+
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_title": "new-link",
+        "default_icon": {
+            "16": "images/icon_16.png",
+            "32": "images/icon_32.png",
+            "48": "images/icon_48.png",
+            "128": "images/icon_128.png"
+        },
+        "default_popup": "index.html"
+    },
+    "commands": {
+        "_execute_action": {
+            "suggested_key": "Ctrl+Shift+1",
+            "description": "opens up the popup"
+        },
+        "new-tab-link": {
+            "suggested_key": "Ctrl+Shift+2",
+            "description": "opens a new tab with specified link"
+        }
+    }
+}
